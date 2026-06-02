@@ -1,0 +1,568 @@
+/* =============================================
+   PRETENDARD FONT FACE
+   ============================================= */
+@font-face {
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =============================================
+   CSS VARIABLES
+   ============================================= */
+:root {
+  --color-bg: #fffaf2;
+  --color-black: #1b1b1b;
+  --color-gray: #787878;
+  --color-beige: #ece6de;
+  --color-pink: #fdd6f5;
+  --color-border: #787878;
+
+  --font-main: "Pretendard", sans-serif;
+
+  --radius-pill: 100px;
+  --radius-badge: 12px;
+  --radius-card: 26px;
+  --radius-box: 14px;
+  --border-width: 0.8px;
+  --nav-height: 48px;
+}
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-black);
+  font-family: var(--font-main);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* =============================================
+   NAVIGATION
+   ============================================= */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: rgba(255, 250, 242, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 0.6px solid rgba(120, 120, 120, 0.3);
+}
+
+.nav__logo {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.032px;
+  color: var(--color-black);
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  height: 26px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.028px;
+  color: #c8c0b8;
+  text-transform: uppercase;
+}
+
+.nav__link--active {
+  color: var(--color-black);
+}
+
+.nav__menu-mobile {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+/* =============================================
+   MAIN  — nav(48px) + 상하 여백 80px
+   ============================================= */
+.main {
+  display: flex;
+  justify-content: center;
+  /* nav 높이(48px) + 위 여백(80px) = 128px */
+  padding-top: 128px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-height: 100vh;
+}
+
+/* =============================================
+   CARD
+   ============================================= */
+.card {
+  background-color: var(--color-bg);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 34px;
+  width: 817px;
+  /* 카드 내부 섹션 간격 */
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* =============================================
+   TAG / BADGE
+   ============================================= */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.028px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.tag--gray {
+  background-color: var(--color-beige);
+  color: var(--color-black);
+}
+.tag--pink {
+  background-color: var(--color-pink);
+  color: var(--color-black);
+}
+
+/* =============================================
+   CARD HEADER  (RESUME ←→ Frontend Developer)
+   ============================================= */
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* RESUME 태그: 남은 공간 모두 차지 */
+.card__header-resume {
+  flex: 1;
+  justify-content: flex-start;
+  height: 30px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+}
+
+.card__header .tag--pink {
+  flex-shrink: 0;
+  height: 30px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+}
+
+/* =============================================
+   HERO  (이름 + 소개문 + 사진)
+   ============================================= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  flex: 1;
+}
+
+.hero__name {
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 0.93;
+  letter-spacing: -0.92px;
+  color: var(--color-black);
+}
+
+.hero__badge {
+  align-self: flex-start;
+  border-radius: var(--radius-badge);
+  height: 26px;
+  font-size: 14px;
+}
+
+.hero__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.028px;
+  color: var(--color-black);
+  max-width: 455px;
+}
+
+.hero__photo {
+  flex-shrink: 0;
+  width: 186px;
+  height: 186px;
+  border-radius: 31px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* =============================================
+   DIVIDER
+   ============================================= */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+/* =============================================
+   2-COLUMN GRID
+   ============================================= */
+.grid {
+  display: grid;
+  grid-template-columns: 374px 1fr;
+  gap: 30px;
+  align-items: stretch; /* 양쪽 컬럼 높이 동일하게 */
+}
+
+.grid__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Experience 컬럼이 그리드 높이를 꽉 채움 */
+.grid__right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 박스가 컬럼 높이를 꽉 채우고, 내부도 flex 체인으로 연결 */
+.grid__right .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* timeline이 박스의 남은 공간을 차지 */
+.grid__right .timeline {
+  flex: 1;
+}
+
+/* timeline__items도 높이를 이어받아 내용이 위에서부터 쌓임 */
+.grid__right .timeline__items {
+  flex: 1;
+}
+
+/* =============================================
+   BOX  (Education / Skills / Experience 공통)
+   ============================================= */
+.box {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-box);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.box__label {
+  align-self: flex-start;
+  border-radius: var(--radius-badge);
+  height: 26px;
+  font-size: 12px;
+  letter-spacing: -0.024px;
+}
+
+/* =============================================
+   TIMELINE  (세로선 + 내용 묶음)
+   ============================================= */
+.timeline {
+  display: flex;
+  gap: 18px;
+  /* 자식이 높이를 stretch 할 수 있도록 */
+  align-items: stretch;
+}
+
+/* 세로선: 2px, 진한 gray, opacity 없음 */
+.timeline__line {
+  flex-shrink: 0;
+  width: 4px;
+  background-color: #ece6de;
+  border-radius: 2px;
+  /* align-self stretch → 부모 flex의 높이만큼 자동 늘어남 */
+  align-self: stretch;
+}
+
+.timeline__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* =============================================
+   EDUCATION
+   ============================================= */
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edu-item__year {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray);
+  letter-spacing: -0.024px;
+}
+
+.edu-item__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.edu-item__school {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-black);
+  letter-spacing: -0.028px;
+}
+
+.edu-item__dept {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-gray);
+  letter-spacing: -0.026px;
+}
+
+.edu-item__dept::before {
+  content: "• ";
+}
+
+/* =============================================
+   SKILLS
+   ============================================= */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  /* 세로선과 높이 맞추기 */
+  align-self: stretch;
+}
+
+.skills-list__item {
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: -0.026px;
+}
+
+.skills-list__item strong {
+  font-weight: 600;
+  color: var(--color-black);
+  margin-right: 4px;
+}
+
+.skills-list__item span {
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+/* =============================================
+   EXPERIENCE
+   ============================================= */
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-item + .exp-item {
+  margin-top: 14px;
+}
+
+.exp-item__header {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.exp-item__company {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-black);
+  letter-spacing: -0.028px;
+}
+
+.exp-item__period {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray);
+  letter-spacing: -0.024px;
+}
+
+.exp-item__list {
+  list-style: disc;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-item__list li {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-gray);
+  letter-spacing: -0.026px;
+  line-height: 2.2;
+  list-style-type: disc;
+}
+
+/* =============================================
+   RESPONSIVE — 900px 이하: 1열
+   ============================================= */
+@media (max-width: 900px) {
+  .main {
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero__name {
+    font-size: 36px;
+  }
+  .hero__photo {
+    width: 161px;
+    height: 161px;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — 540px 이하: 모바일
+   ============================================= */
+@media (max-width: 540px) {
+  .nav {
+    padding: 0 20px;
+  }
+  .nav__list {
+    display: none;
+  }
+  .nav__menu-mobile {
+    display: block;
+  }
+
+  .main {
+    padding-top: 68px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 16px;
+    gap: 16px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero__photo {
+    order: -1;
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero__name {
+    font-size: 38px;
+  }
+  .hero__desc {
+    max-width: 100%;
+  }
+
+  .card__header {
+    flex-wrap: wrap;
+  }
+  .card__header-resume {
+    flex: none;
+  }
+}
