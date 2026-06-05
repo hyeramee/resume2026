@@ -1,36 +1,4 @@
 /* =============================================
-   PRETENDARD FONT FACE
-   ============================================= */
-@font-face {
-  font-family: "Pretendard";
-  src: url("./fonts/Pretendard-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("./fonts/Pretendard-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("./fonts/Pretendard-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Pretendard";
-  src: url("./fonts/Pretendard-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =============================================
    CSS VARIABLES
    ============================================= */
 :root {
@@ -342,7 +310,7 @@ ul {
 .flip-card__face--back {
   transform: rotateY(180deg);
   border: none;
-  background: url("silver card_back.png") center / cover no-repeat;
+  background: url("silver_card_back.png") center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
