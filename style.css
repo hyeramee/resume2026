@@ -156,7 +156,7 @@ ul {
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 34px;
-  width: 817px;
+  width: 937px;
   display: flex;
   flex-direction: column;
   gap: 26px;
@@ -341,7 +341,8 @@ ul {
 
 .flip-card__face--back {
   transform: rotateY(180deg);
-  background-color: #2a2a2a;
+  border: none;
+  background: url("silver card_back.png") center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,18 +354,19 @@ ul {
 }
 
 .flip-card__back-title {
-  font-size: 22px;
+  font-size: clamp(16px, 5vw, 20px);
   font-weight: 700;
   letter-spacing: -0.5px;
-  color: #fff;
+  color: #2a2a2a;
   margin-bottom: 10px;
 }
 
 .flip-card__back-text {
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #fff;
+  font-size: clamp((18px, 5vw, 24px));
+  font-weight: 600;
+  line-height: 1.7;
+  color: #2a2a2a;
+  word-break: keep-all;
 }
 
 .hero__img {
@@ -387,7 +389,7 @@ ul {
    ============================================= */
 .grid {
   display: grid;
-  grid-template-columns: 374px 1fr;
+  grid-template-columns: 434px 1fr;
   gap: 30px;
   align-items: stretch; /* 양쪽 컬럼 높이 동일하게 */
 }
@@ -409,6 +411,7 @@ ul {
   flex: 1;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
 /* timeline이 박스의 남은 공간을 차지 */
@@ -532,7 +535,9 @@ ul {
   padding: 5px;
   border-radius: 8px;
   background-color: var(--color-beige);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .skills-icons__item:hover {
@@ -552,7 +557,7 @@ ul {
 .skills-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .skills-list__item {
@@ -702,7 +707,7 @@ ul {
     flex-wrap: wrap;
   }
   .card__header-resume {
-    flex: none;
+    flex: 1;
   }
 }
 /* =============================================
