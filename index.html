@@ -36,16 +36,27 @@
             <h1 class="hero__name">HYE RAN<br />LEE</h1>
             <span class="tag tag--pink hero__badge">about me</span>
             <p class="hero__desc">
-              UI/UX 디자인 경험을 바탕으로 가이드를 오차 없이 코드로 재현하며 웹
-              접근성을 고려하여 화면을 설계하는 프론트엔드 개발자입니다.
+              <mark class="scroll-highlight">
+                <span>UI/UX 디자인 경험을 바탕으로 가이드를 오차 없이 코드로 재현하며 웹 접근성을 고려하여 화면을 설계하는 프론트엔드 개발자입니다.</span>
+              </mark>
             </p>
           </div>
-          <div class="hero__photo">
-            <img
-              src="https://www.figma.com/api/mcp/asset/c14cae68-5b3f-4d6c-b524-daa2fc5a1a12"
-              alt="HYE RAN LEE 프로필 사진"
-              class="hero__img"
-            />
+          <div class="hero__photo flip-scene">
+            <div class="flip-card">
+              <div class="flip-card__face flip-card__face--front">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/c14cae68-5b3f-4d6c-b524-daa2fc5a1a12"
+                  alt="HYE RAN LEE 프로필 사진"
+                  class="hero__img"
+                />
+              </div>
+              <div class="flip-card__face flip-card__face--back">
+                <div class="flip-card__back-content">
+                  <p class="flip-card__back-title">HELLO!</p>
+                  <p class="flip-card__back-text">디자인과 코딩을 연결하는<br />개발자 이혜란입니다.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -95,31 +106,68 @@
               <span class="tag tag--pink box__label">SKILLS</span>
               <div class="timeline">
                 <div class="timeline__line"></div>
-                <ul class="skills-list">
-                  <li class="skills-list__item">
-                    <strong>개발</strong>
-                    <span>html/css, TailwindCSS</span>
-                  </li>
-                  <li class="skills-list__item">
-                    <strong>AI &amp; 데이터</strong>
-                    <span>A/B test, 통계분석, 생성형 이미지</span>
-                  </li>
-                  <li class="skills-list__item">
-                    <strong>툴</strong>
-                    <span>VS Code, Github, Figma, Adobe Creative Suite</span>
-                  </li>
-                  <li class="skills-list__item">
-                    <strong>리서치</strong>
-                    <span>설문, 경쟁사 분석</span>
-                  </li>
-                  <li class="skills-list__item">
-                    <strong>디자인</strong>
-                    <span
-                      >디자인시스템, 프로토타이핑, 모션디자인,
-                      그래픽디자인</span
-                    >
-                  </li>
-                </ul>
+                <div class="skills-wrapper">
+                  <ul class="skills-icons">
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" width="14" height="14"/>
+                      <span>HTML5</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" width="14" height="14"/>
+                      <span>CSS3</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.simpleicons.org/tailwindcss" alt="TailwindCSS" width="14" height="14"/>
+                      <span>Tailwind</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code" width="14" height="14"/>
+                      <span>VS Code</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.simpleicons.org/github" alt="GitHub" width="14" height="14"/>
+                      <span>GitHub</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" width="14" height="14"/>
+                      <span>Figma</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-original.svg" alt="After Effects" width="14" height="14"/>
+                      <span>After Effects</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop" width="14" height="14"/>
+                      <span>Photoshop</span>
+                    </li>
+                    <li class="skills-icons__item">
+                      <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" alt="Illustrator" width="14" height="14"/>
+                      <span>Illustrator</span>
+                    </li>
+                  </ul>
+                  <ul class="skills-list">
+                    <li class="skills-list__item">
+                      <strong>개발</strong>
+                      <span>html/css, TailwindCSS</span>
+                    </li>
+                    <li class="skills-list__item">
+                      <strong>AI &amp; 데이터</strong>
+                      <span>A/B test, 통계분석, 생성형 이미지</span>
+                    </li>
+                    <li class="skills-list__item">
+                      <strong>툴</strong>
+                      <span>VS Code, Github, Figma, Adobe Creative Suite</span>
+                    </li>
+                    <li class="skills-list__item">
+                      <strong>리서치</strong>
+                      <span>설문, 경쟁사 분석</span>
+                    </li>
+                    <li class="skills-list__item">
+                      <strong>디자인</strong>
+                      <span>디자인시스템, 프로토타이핑, 모션디자인, 그래픽디자인</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
