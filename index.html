@@ -19,7 +19,7 @@
         </li>
         <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
       </ul>
-      <span class="nav__menu-mobile">MENU</span>
+      <button class="nav__menu-mobile" type="button" aria-label="메뉴 열기">MENU</button>
     </nav>
 
     <!-- MAIN -->
@@ -46,15 +46,16 @@
             <div class="flip-card">
               <div class="flip-card__face flip-card__face--front">
                 <img
-                  src="https://www.figma.com/api/mcp/asset/c14cae68-5b3f-4d6c-b524-daa2fc5a1a12"
+                  src="profile.png"
                   alt="HYE RAN LEE 프로필 사진"
                   class="hero__img"
+                  width="186"
+                  height="186"
                 />
               </div>
               <div class="flip-card__face flip-card__face--back">
                 <div class="flip-card__back-content">
-                  <p class="flip-card__back-title">HELLO!</p>
-                  <p class="flip-card__back-text">디자인과 코딩을 연결하는<br />개발자 이혜란입니다.</p>
+                  <p class="flip-card__back-text">화면 앞 디자인보다<br />화면 뒤 데이터의 맥락이 중요합니다.</p>
                 </div>
               </div>
             </div>
@@ -70,14 +71,14 @@
           <div class="grid__left">
             <!-- EDUCATION -->
             <div class="box">
-              <span class="tag tag--pink box__label">Education</span>
+              <h2 class="tag tag--pink box__label">Education</h2>
               <div class="timeline">
                 <div class="timeline__line"></div>
                 <div class="timeline__items">
                   <div class="edu-item">
                     <span class="edu-item__year">2024 - 2024</span>
                     <div class="edu-item__detail">
-                      <strong class="edu-item__school">성신여자대학교</strong>
+                      <span class="edu-item__school">성신여자대학교</span>
                       <span class="edu-item__dept">경영학과</span>
                     </div>
                   </div>
@@ -85,7 +86,7 @@
                   <div class="edu-item">
                     <span class="edu-item__year">2024 - 2024</span>
                     <div class="edu-item__detail">
-                      <strong class="edu-item__school">신구대학교</strong>
+                      <span class="edu-item__school">신구대학교</span>
                       <span class="edu-item__dept">시각디자인과</span>
                     </div>
                   </div>
@@ -104,7 +105,7 @@
 
             <!-- SKILLS -->
             <div class="box">
-              <span class="tag tag--pink box__label">SKILLS</span>
+              <h2 class="tag tag--pink box__label">SKILLS</h2>
               <div class="timeline">
                 <div class="timeline__line"></div>
                 <div class="skills-wrapper">
@@ -148,23 +149,23 @@
                   </ul>
                   <ul class="skills-list">
                     <li class="skills-list__item">
-                      <strong>개발</strong>
+                      <span class="skills-list__label">개발</span>
                       <span>html/css, TailwindCSS</span>
                     </li>
                     <li class="skills-list__item">
-                      <strong>AI &amp; 데이터</strong>
+                      <span class="skills-list__label">AI &amp; 데이터</span>
                       <span>A/B test, 통계분석, 생성형 이미지</span>
                     </li>
                     <li class="skills-list__item">
-                      <strong>툴</strong>
+                      <span class="skills-list__label">툴</span>
                       <span>VS Code, Github, Figma, Adobe Creative Suite</span>
                     </li>
                     <li class="skills-list__item">
-                      <strong>리서치</strong>
+                      <span class="skills-list__label">리서치</span>
                       <span>설문, 경쟁사 분석</span>
                     </li>
                     <li class="skills-list__item">
-                      <strong>디자인</strong>
+                      <span class="skills-list__label">디자인</span>
                       <span>디자인시스템, 프로토타이핑, 모션디자인, 그래픽디자인</span>
                     </li>
                   </ul>
@@ -176,13 +177,13 @@
           <!-- RIGHT COLUMN -->
           <div class="grid__right">
             <div class="box box--tall">
-              <span class="tag tag--pink box__label">experience</span>
+              <h2 class="tag tag--pink box__label">experience</h2>
               <div class="timeline">
                 <div class="timeline__line"></div>
                 <div class="timeline__items">
                   <div class="exp-item">
                     <div class="exp-item__header">
-                      <strong class="exp-item__company">스케일업스쿼드</strong>
+                      <span class="exp-item__company">스케일업스쿼드</span>
                       <span class="exp-item__period"
                         >인턴 2025. 04 - 2025. 07</span
                       >
@@ -197,7 +198,7 @@
 
                   <div class="exp-item">
                     <div class="exp-item__header">
-                      <strong class="exp-item__company">라이프스토리</strong>
+                      <span class="exp-item__company">라이프스토리</span>
                       <span class="exp-item__period">2020. 10 ~ 2023. 06</span>
                     </div>
                     <ul class="exp-item__list">
