@@ -1,6 +1,6 @@
 # Resume — HYE RAN LEE
 
-HTML/CSS로 만든 포트폴리오 이력서.  
+HTML/CSS로 만든 이력서.  
 **"보기 좋은" 수준에서 접근성 · 시맨틱 · 유지보수까지 갖춘 코드로.**
 
 🔗 **https://hyeramee.github.io/resume2026/**
