@@ -87,20 +87,6 @@ button {
 
 ### 플립카드 3D 애니메이션
 
-```css
-.flip-card {
-  transform-style: preserve-3d;
-  animation: auto-flip 5s ease-in-out infinite;
-  will-change: transform, opacity; /* GPU 레이어 분리 */
-}
-.flip-card__face {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.flip-scene:hover .flip-card {
-  animation-play-state: paused; /* 호버 시 일시정지 */
-}
-```
 
 `will-change` 로 GPU 레이어를 미리 분리해 애니메이션 성능을 최적화했다.  
 메탈릭 뒷면은 `conic-gradient` 브라우저 렌더링 차이로 인해 PNG 이미지로 교체해 픽셀 정밀도를 확보했다.
@@ -109,21 +95,10 @@ button {
 
 ### 스크롤 형광펜 — JS 없이 CSS만
 
-```css
-mark.scroll-highlight span {
-  background: linear-gradient(50deg, var(--bg-color) 50%, transparent 50%)
-    110% 0 / 200% 100% no-repeat;
-  animation: highlightDraw 5s cubic-bezier(0.22, 0.61, 0.36, 1) 1s both;
-}
 
-@keyframes highlightDraw {
-  from { background-position: 110% 0; }
-  to   { background-position: 0% 0; }
-}
-```
 
 `<mark>` 태그로 강조 의미를 부여하고, `background-position` 이동으로 왼쪽에서 오른쪽으로 그어지는 효과를 구현했다.  
-`--bg-color` CSS 변수로 다크모드 색상 분기도 처리했다.
+
 
 ---
 
@@ -159,6 +134,7 @@ mark.scroll-highlight span {
 ```
 
 색상·반경·높이를 `:root` 한 곳에서 관리.  
+---
 `!important` **0번** — specificity 만으로 스타일 충돌 없이 해결했다.
 
 ---
