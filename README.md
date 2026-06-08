@@ -74,7 +74,6 @@ button {
 - [x] `<button type="button">` + `aria-label="메뉴 열기"` — 스크린리더 역할 안내
 - [x] `<img>` 에 `alt`, `width="186" height="186"` 명시 — CLS 방지
 - [x] `word-break: keep-all` — 한국어 단어 중간 잘림 방지
-- [x] `rel="noopener noreferrer"` — 외부 링크 보안
 - [x] `lang="ko"` — 문서 언어 선언
 - [x] W3C Markup Validator **Errors 0**
 
